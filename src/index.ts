@@ -1,5 +1,4 @@
-function log(sentence: string): void {
-    console.log(sentence);
-}
+import {Calculator} from './Calculator';
 
-log('initial project');
+const calc = new Calculator();
+console.log(calc.add(2,2))
