@@ -5,7 +5,7 @@ export default class GameControl {
     public draw: any;
     public config: any;
 
-    constructor(update: any, draw: any, config: object) {
+    constructor(update: any, draw: any) {
         this.update = update;
         this.draw = draw;
         this.config = new Config();

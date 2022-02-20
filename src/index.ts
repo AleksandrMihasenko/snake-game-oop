@@ -1,5 +1,5 @@
 import './styles/styles.sass';
-import Canvas from './scripts/Canvas';
+import Game from './scripts/Game';
 
 let container = document.querySelector('#board-canvas') as HTMLElement;
-let canvas = new Canvas(container);
+new Game(container);
