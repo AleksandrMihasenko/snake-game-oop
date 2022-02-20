@@ -1,4 +1,5 @@
 import './styles/styles.sass';
-import { calcRandomNumber } from './scripts/helpers';
-import Config from './scripts/Config';
 import Canvas from './scripts/Canvas';
+
+let container = document.querySelector('#board-canvas') as HTMLElement;
+let canvas = new Canvas(container);
