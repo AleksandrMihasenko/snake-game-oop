@@ -1,6 +1,4 @@
 import './styles/styles.sass';
-import {Calculator} from './Calculator';
-
-
-const calc = new Calculator();
-console.log(calc.add(2,2));
+import { calcRandomNumber } from './scripts/helpers';
+import Config from './scripts/Config';
+import Canvas from './scripts/Canvas';
