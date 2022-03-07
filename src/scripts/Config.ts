@@ -4,6 +4,6 @@ export default class Config {
         public step: number = 0,
         public maxStep: number = 6,
         public sizeCell: number = 16,
-        public sizeFruit: number = 16 / 4,
+        public sizeFruit: number = sizeCell / 4,
     ) {}
 }

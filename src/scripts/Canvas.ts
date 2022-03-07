@@ -6,7 +6,7 @@ export default class Canvas {
     constructor(container: HTMLElement) {
 
         this.canvas = document.createElement('canvas') as HTMLCanvasElement;
-        this.context = this.canvas.getContext("2d")!;
+        this.context = this.canvas.getContext('2d')!;
         this.container = container;
 
         this.canvas.width = 320;
