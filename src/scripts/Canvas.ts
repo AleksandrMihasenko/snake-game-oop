@@ -2,6 +2,7 @@ export default class Canvas {
     public container;
     public canvas: HTMLCanvasElement;
     public context: CanvasRenderingContext2D;
+    element: any;
 
     constructor(container: HTMLElement) {
 
