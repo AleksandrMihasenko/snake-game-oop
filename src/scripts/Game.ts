@@ -25,8 +25,7 @@ export default class Game {
     }
 
     draw() {
-        this.canvas.context.clearRect(0, 0, this.canvas.element.width, this.canvas.element.height);
-
+        this.canvas.context.clearRect(0, 0, this.canvas.canvas.width, this.canvas.canvas.height);
         this.snake.draw(this.canvas.context);
         this.fruit.draw(this.canvas.context);
     }

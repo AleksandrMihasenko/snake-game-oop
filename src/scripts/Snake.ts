@@ -27,16 +27,16 @@ export default class Snake {
     update(fruit: any, score: any, canvas: any) {
         this.x += this.dx;
         this.y += this.dy;
-
+        
         if (this.x < 0) {
-            this.x = canvas.element.width - this.config.sizeCell;
-        } else if (this.x >= canvas.element.width) {
+            this.x = canvas.clientWidth - this.config.sizeCell;
+        } else if (this.x >= canvas.clientWidth) {
             this.x = 0;
         }
 
         if (this.y < 0) {
-            this.y = canvas.element.height - this.config.sizeCell;
-        } else if (this.y >= canvas.element.height) {
+            this.y = canvas.clientHeight - this.config.sizeCell;
+        } else if (this.y >= canvas.clientHeight) {
             this.y = 0;
         }
 
