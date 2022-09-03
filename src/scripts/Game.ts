@@ -15,8 +15,7 @@ export default class Game {
         this.canvas = new Canvas(container);
         this.snake = new Snake();
         this.fruit = new Fruit(this.canvas);
-        this.score = new Score('game-score .score-count', 0);
-
+        this.score = new Score('.board_header_score_count', 0);
 
         new GameControls(this.update.bind(this), this.draw.bind(this));
     }

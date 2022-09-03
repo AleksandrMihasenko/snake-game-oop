@@ -5,9 +5,8 @@ export default class Fruit {
     public x;
     public y;
     public config;
-    private canvas: any;
 
-    constructor(canvas: any) {
+    constructor(private canvas: any) {
         this.x = 0;
         this.y = 0
 
@@ -23,7 +22,7 @@ export default class Fruit {
     }
 
     randomPosition() {
-        this.x = calcRandomNumber(0, this.canvas.element.width / this.config.sizeCell) * this.config.sizeCell;
-        this.y = calcRandomNumber(0, this.canvas.element.height / this.config.sizeCell) * this.config.sizeCell;
+        this.x = calcRandomNumber(0, this.canvas.clientWidth / this.config.sizeCell) * this.config.sizeCell;
+        this.y = calcRandomNumber(0, this.canvas.clientHeight / this.config.sizeCell) * this.config.sizeCell;
     }
 }

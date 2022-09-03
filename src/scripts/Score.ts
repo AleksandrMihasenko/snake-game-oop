@@ -1,9 +1,8 @@
 export default class Score {
-    public scoreBlock: any;
-    public score: number = 0;
-
-    constructor(scoreBlock: any, score: number) {
-        this.scoreBlock = document.querySelector(scoreBlock);
+    public scoreBlock: HTMLElement | null;
+    
+    constructor(public scoreWrapper: string, public score: number = 0) {
+        this.scoreBlock = document.querySelector(scoreWrapper);
         this.score = score;
 
         this.draw();
@@ -20,6 +19,7 @@ export default class Score {
     }
 
     draw(): void {
+        // @ts-ignore
         this.scoreBlock.innerHTML = this.score;
     }
 }
