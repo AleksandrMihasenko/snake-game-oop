@@ -3,7 +3,7 @@ import Config from './Config';
 export default class GameControl {
   public update: Function;
   public draw: Function;
-  public config: any;
+  public config: Config;
   
   constructor(update: Function, draw: Function) {
     this.update = update;
@@ -15,7 +15,7 @@ export default class GameControl {
   }
   
   animate():void {
-    requestAnimationFrame(() => this.animate() );
+    requestAnimationFrame(() => this.animate());
     
     if (++this.config.step < this.config.maxStep) {
       return;

@@ -19,7 +19,8 @@ export default class Score {
   }
   
   draw(): void {
-    // @ts-ignore
-    this.scoreBlock.innerHTML = this.score;
+    if (this.scoreBlock) {
+      this.scoreBlock.innerHTML = String(this.score);
+    }
   }
 }

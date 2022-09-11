@@ -1,5 +1,4 @@
 import Canvas from './Canvas';
-import Config from './Config';
 import GameControls from './GameControls';
 import Snake from './Snake';
 import Score from './Score';
@@ -12,7 +11,7 @@ export default class Game {
   public fruit;
   
   constructor(container: Element | null) {
-    this.canvas = new Canvas(container);
+    this.canvas = new Canvas(container, 320, 400);
     this.snake = new Snake();
     this.fruit = new Fruit(this.canvas);
     this.score = new Score('.board_header_score_count', 0);

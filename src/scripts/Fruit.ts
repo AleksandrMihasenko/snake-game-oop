@@ -1,20 +1,20 @@
 import Config from './Config';
-import {calcRandomNumber} from './helpers';
+import Canvas from './Canvas';
+import { calcRandomNumber } from './helpers';
 
 export default class Fruit {
-  public x;
-  public y;
+  public x: number = 0;
+  public y: number = 0;
   public config;
+  public canvas;
   
-  constructor(private canvas: any) {
-    this.x = 0;
-    this.y = 0
-    
+  constructor(canvas: Canvas) {
+    this.canvas = canvas;
     this.config = new Config();
     this.randomPosition();
   }
   
-  draw(context: any) {
+  draw(context: CanvasRenderingContext2D) {
     context.beginPath();
     context.fillStyle = '#a00034';
     context.arc(this.x + (this.config.sizeCell / 2), this.y + (this.config.sizeCell / 2), this.config.sizeFruit, 0, 2 * Math.PI);
@@ -22,7 +22,7 @@ export default class Fruit {
   }
   
   randomPosition() {
-    this.x = calcRandomNumber(0, this.canvas.clientWidth / this.config.sizeCell) * this.config.sizeCell;
-    this.y = calcRandomNumber(0, this.canvas.clientHeight / this.config.sizeCell) * this.config.sizeCell;
+    this.x = calcRandomNumber(0, this.canvas.width / this.config.sizeCell) * this.config.sizeCell;
+    this.y = calcRandomNumber(0, this.canvas.height / this.config.sizeCell) * this.config.sizeCell;
   }
 }
