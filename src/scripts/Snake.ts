@@ -24,19 +24,19 @@ export default class Snake {
     this.control();
   }
   
-  update(fruit: any, score: any, canvas: any) {
+  update(fruit: Fruit, score: Score, canvas: Canvas) {
     this.x += this.dx;
     this.y += this.dy;
     
     if (this.x < 0) {
-      this.x = canvas.clientWidth - this.config.sizeCell;
-    } else if (this.x >= canvas.clientWidth) {
+      this.x = canvas.width - this.config.sizeCell;
+    } else if (this.x >= canvas.width) {
       this.x = 0;
     }
     
     if (this.y < 0) {
-      this.y = canvas.clientHeight - this.config.sizeCell;
-    } else if (this.y >= canvas.clientHeight) {
+      this.y = canvas.height - this.config.sizeCell;
+    } else if (this.y >= canvas.height) {
       this.y = 0;
     }
     
@@ -63,7 +63,7 @@ export default class Snake {
     })
   }
   
-  draw(context: any) {
+  draw(context: CanvasRenderingContext2D) {
     this.tails.forEach((elem, index) => {
       if (index === 0) {
         context.fillStyle = '#fa0556';
@@ -86,17 +86,17 @@ export default class Snake {
   control() {
     document.addEventListener('keydown', (event) => {
       if (event.code === 'KeyW') {
-        this.dy = -this.config.sizeCell;
         this.dx = 0;
+        this.dy = -this.config.sizeCell;
+      } else if (event.code === 'KeyS') {
+        this.dx = 0;
+        this.dy = this.config.sizeCell;
       } else if (event.code === 'KeyA') {
-        this.dy = -this.config.sizeCell;
-        this.dx = 0;
-      } else if (event.code === 'KeyS') {
-        this.dy = -this.config.sizeCell;
-        this.dx = 0;
-      } else if (event.code === 'KeyS') {
-        this.dy = -this.config.sizeCell;
-        this.dx = 0;
+        this.dx = -this.config.sizeCell;
+        this.dy = 0;
+      } else if (event.code === 'KeyD') {
+        this.dx = this.config.sizeCell;
+        this.dy = 0;
       }
     })
   }
