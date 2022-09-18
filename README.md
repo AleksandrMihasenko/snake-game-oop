@@ -6,7 +6,7 @@ This project has been created using **typescript** and **oop paradigm**
 npm run serve
 ```
 
-to watch the application
+to watch the application here https://aleksandrmihasenko.github.io/snake-game-oop/
 
 You can control the snake using keys - 'W', 'A', 'D', 'S'
 
