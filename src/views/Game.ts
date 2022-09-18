@@ -1,5 +1,5 @@
 import Canvas from './Canvas';
-import GameControls from '../scripts/GameControls';
+import GameControls from '../config/GameControls';
 import Snake from './Snake';
 import Score from './Score';
 import Fruit from './Fruit';

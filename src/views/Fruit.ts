@@ -1,4 +1,4 @@
-import Config from '../scripts/Config';
+import Config from '../config/Config';
 import Canvas from './Canvas';
 import { calcRandomNumber } from '../helpers/calcRandomNumber';
 
