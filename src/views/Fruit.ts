@@ -1,6 +1,6 @@
-import Config from './Config';
+import Config from '../scripts/Config';
 import Canvas from './Canvas';
-import { calcRandomNumber } from './helpers';
+import { calcRandomNumber } from '../helpers/calcRandomNumber';
 
 export default class Fruit {
   public x: number = 0;

@@ -1,5 +1,5 @@
 import Canvas from './Canvas';
-import Config from './Config';
+import Config from '../scripts/Config';
 import Fruit from './Fruit';
 import Score from './Score';
 

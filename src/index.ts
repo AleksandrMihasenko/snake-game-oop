@@ -1,5 +1,5 @@
 import './styles/styles.sass';
-import Game from './scripts/Game';
+import Game from './views/Game';
 
 const container = document.querySelector('#board-canvas');
 
